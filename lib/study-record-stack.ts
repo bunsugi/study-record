@@ -10,10 +10,10 @@ export class StudyRecordStack extends cdk.Stack {
 
     // The code that defines your stack goes here
 
-    new NodejsFunction(this, 'lambda',{
-      entry: 'lambda/src/app.ts',
+    new NodejsFunction(this, 'lambda', {
+      entry: 'lambda/src/lambda.ts',
       handler: 'handler',
-      runtime: Runtime.NODEJS_18_X
-    })
+      runtime: Runtime.NODEJS_18_X,
+    });
   }
 }
